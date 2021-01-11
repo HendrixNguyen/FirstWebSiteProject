@@ -15,16 +15,24 @@ Including another URLconf
 """
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.contrib.redirects.models import Redirect
+from django.shortcuts import redirect
 from django.urls import path
 
 from django.conf import settings
+from django.views.generic import RedirectView
+
 from myapp.views import HomeView, GalleryView, AboutView, ContactView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('/', RedirectView.as_view(url='home/')),
     path('home/', HomeView.as_view()),
     path('gallery/', GalleryView.as_view()),
     path('about/', AboutView.as_view()),
     path('contact/', ContactView.as_view())
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
+#
+# def home():
+#     if urlpatterns == "/":
+#         return redirect(HomeView.as_view)

@@ -79,7 +79,7 @@ DATABASES = {
         'NAME': 'project_cnpm',
         'USER': 'admin',
         'PASSWORD': 'admin',
-        'HOST': 'localhost',
+        'HOST': '18.222.192.153',
         'PORT': '3306',
     }
 }
