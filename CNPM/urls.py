@@ -13,25 +13,22 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.contrib.redirects.models import Redirect
-from django.shortcuts import redirect
 from django.urls import path
-
-from django.conf import settings
 from django.views.generic import RedirectView
 
 from myapp.views import HomeView, GalleryView, AboutView, ContactView
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('/', RedirectView.as_view(url='home/')),
-    path('home/', HomeView.as_view()),
-    path('gallery/', GalleryView.as_view()),
-    path('about/', AboutView.as_view()),
-    path('contact/', ContactView.as_view())
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+                  path('admin/', admin.site.urls),
+                  path('', RedirectView.as_view(url='home/')),
+                  path('home/', HomeView.as_view()),
+                  path('gallery/', GalleryView.as_view()),
+                  path('about/', AboutView.as_view()),
+                  path('contact/', ContactView.as_view())
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 #
 # def home():
 #     if urlpatterns == "/":

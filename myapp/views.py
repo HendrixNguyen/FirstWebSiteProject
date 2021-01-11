@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.views import View
 
-
 from myapp.models import Customer, Product
 
 
