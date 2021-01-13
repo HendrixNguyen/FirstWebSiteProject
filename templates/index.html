@@ -9,13 +9,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Đồ án CNPM</title>
-    <link rel="stylesheet" href="/static/css/style.css" type="text/css">
+    <link href="/static/css/style.css" rel="stylesheet" type="text/css">
+    <scrip href="/static/js/index.js"></scrip>
 </head>
 <body>
 <div id="header">
     <div class="wrapper clearfix">
         <div id="logo">
-            <a href="index.html"><img src="/static/images/logo.png" alt="LOGO"></a>
+            <a href="/"><img alt="LOGO" src="/static/images/logo.png"></a>
         </div>
         <ul id="navigation">
             <li class="selected">
@@ -44,7 +45,7 @@
             </div>
         </div>
         <div class="highlight">
-            <h2>Lorem ipsum dolor sit amet - <i>consectetur adipiscing elit.</i></h2>
+            <h2>Nhóm ba con gà <i>Website giới thiệu mỹ phẩm.</i></h2>
         </div>
     </div>
     <div class="body clearfix">
@@ -59,37 +60,46 @@
     </div>
 </div>
 <div id="footer">
-    <ul id="featured" class="wrapper clearfix">
-       {% for customer in customers %}
+    <ul class="wrapper clearfix" id="featured">
+        {% for customer in customers %}
         <li>
             <h3><a href="#">{{ customer.name }}</a></h3>
             <p>
-{#                {% for respons in responses %}#}
-{#                    {{ respons }}#}
-{#                {% endfor %}#}
+<!--                {% for respons in responses %}-->
+<!--                    {{ respons }}-->
+<!--                {% endfor %}-->
                 {{ customer.respones }}
             </p>
         </li>
         {% endfor %}
 
-{#        <li>#}
-{#            <h3><a href="#">{{ user_id }}</a></h3>#}
-{#            <p>#}
-{#                {{ user_response }}#}
-{#            </p>#}
-{#        </li>#}
-{#        <li>#}
-{#            <h3><a href="#">{{ user_id }}</a></h3>#}
-{#            <p>#}
-{#                {{ user_response }}#}
-{#            </p>#}
-{#        </li>#}
-{#        <li>#}
-{#            <h3><a href="#">{{ user_id }}</a></h3>#}
-{#            <p>#}
-{#                {{ user_response }}#}
-{#            </p>#}
-{#        </li>#}
+        {#
+        <li>#}
+            {# <h3><a href="#">{{ user_id }}</a></h3>#}
+            {# <p>#}
+                {# {{ user_response }}#}
+                {# </p>#}
+            {#
+        </li>
+        #}
+        {#
+        <li>#}
+            {# <h3><a href="#">{{ user_id }}</a></h3>#}
+            {# <p>#}
+                {# {{ user_response }}#}
+                {# </p>#}
+            {#
+        </li>
+        #}
+        {#
+        <li>#}
+            {# <h3><a href="#">{{ user_id }}</a></h3>#}
+            {# <p>#}
+                {# {{ user_response }}#}
+                {# </p>#}
+            {#
+        </li>
+        #}
     </ul>
     <div class="body">
         <div class="wrapper clearfix">

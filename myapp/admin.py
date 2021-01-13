@@ -3,9 +3,11 @@ from django.contrib import admin
 # Register your models here.
 from myapp.models import Customer, User, Product, Brand
 
-# @admin.register(Customer)
-# class CustomerAdmin(admin.ModelAdmin):
-#     pass
+
+class CustomerAdmin(admin.ModelAdmin):
+    list_display = ('name', 'email', 'phone_number')
+
+
 #
 #
 # @admin.register(User)
@@ -22,7 +24,7 @@ from myapp.models import Customer, User, Product, Brand
 # class BrandAdmin(admin.ModelAdmin):
 #     pass
 
-admin.site.register(User)
+admin.site.register(User, CustomerAdmin)
 admin.site.register(Customer)
 admin.site.register(Product)
 admin.site.register(Brand)

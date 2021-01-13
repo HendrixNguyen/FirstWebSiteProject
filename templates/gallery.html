@@ -6,52 +6,53 @@
 <head>
     <meta charset="UTF-8">
     <title>Gallery - Astronomy Website Template</title>
-    <link rel="stylesheet" href="/static/css/style.css" type="text/css">
+    <link href="/static/css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div id="header">
     <div class="wrapper clearfix">
         <div id="logo">
-            <a href="index.html"><img src="/static/images/logo.png" alt="LOGO"></a>
+            <a href="index.html"><img alt="LOGO" src="/static/images/logo.png"></a>
         </div>
         <ul id="navigation">
             <li class="selected">
                 <a href="/home/">Home</a>
             </li>
             <li>
-                <a href="/gallery/">Gallery</a>
+                <a href="/gallery">Gallery</a>
             </li>
             <li>
                 <a href="/about/">About</a>
             </li>
             <li>
-                <a href="/contact/">Contact Us</a>
+                <a href="contact/">Contact Us</a>
             </li>
         </ul>
     </div>
 </div>
 <div id="contents">
-    <div id="gallery" class="wrapper clearfix">
+    <div class="wrapper clearfix" id="gallery">
         <div id="sidebar">
             <ul>
                 <li>
-                    <a href="blog.html"><img src="/static/images/earth-small.jpg" alt="Img" height="154" width="213"></a>
+                    <a href="blog.html"><img alt="Img" height="154" src="/static/images/earth-small.jpg"
+                                             width="213"></a>
                 </li>
                 <li>
-                    <a href="blog.html"><img src="/static/images/spaceshuttle-closeup.jpg" alt="Img" height="154"
+                    <a href="blog.html"><img alt="Img" height="154" src="/static/images/spaceshuttle-closeup.jpg"
                                              width="213"></a>
                 </li>
             </ul>
             <div class="click-here">
                 <h1>Lorem Ipsum Dolor!</h1>
-                <a href="index.html" class="btn1">Click Here!</a>
+                <a class="btn1" href="index.html">Click Here!</a>
             </div>
         </div>
         <div class="main">
             <h1>Gallery</h1>
             <div class="photos">
                 <div class="viewer">
-                    <img src="/static/images/astronaut-large.jpg" alt="Img" height="348" width="703">
+                    <img alt="Img" height="348" src="/static/images/astronaut-large.jpg" width="703">
                 </div>
                 <ul>
                     {% for product in products %}
@@ -64,22 +65,34 @@
                     </li>
                     {% endfor %}
 
-{#                    <li>#}
-{#                        <a href="gallery.html"><img src="images/thumbnail-astronaut.jpg" alt="Img" height="96"#}
-{#                                                    width="150"><span class="cover"></span></a>#}
-{#                    </li>#}
-{#                    <li>#}
-{#                        <a href="gallery.html"><img src="images/thumbnail-spacecraft.jpg" alt="Img" height="96"#}
-{#                                                    width="150"><span class="cover"></span></a>#}
-{#                    </li>#}
-{#                    <li>#}
-{#                        <a href="gallery.html"><img src="images/thumbnail-earth.jpg" alt="Img" height="96"#}
-{#                                                    width="150"><span class="cover"></span></a>#}
-{#                    </li>#}
-{#                    <li>#}
-{#                        <a href="gallery.html"><img src="images/thumbnail-craft.jpg" alt="Img" height="96"#}
-{#                                                    width="150"><span class="cover"></span></a>#}
-{#                    </li>#}
+                    {#
+                    <li>#}
+                        {# <a href="gallery.html"><img #} alt="Img" height="96" src="images/thumbnail-astronaut.jpg"
+                                                       width="150" {#><span class="cover"></span></a>#}
+                        {#
+                    </li>
+                    #}
+                    {#
+                    <li>#}
+                        {# <a href="gallery.html"><img #} alt="Img" height="96" src="images/thumbnail-spacecraft.jpg"
+                                                       width="150" {#><span class="cover"></span></a>#}
+                        {#
+                    </li>
+                    #}
+                    {#
+                    <li>#}
+                        {# <a href="gallery.html"><img #} alt="Img" height="96" src="images/thumbnail-earth.jpg"
+                                                       width="150" {#><span class="cover"></span></a>#}
+                        {#
+                    </li>
+                    #}
+                    {#
+                    <li>#}
+                        {# <a href="gallery.html"><img #} alt="Img" height="96" src="images/thumbnail-craft.jpg"
+                                                       width="150" {#><span class="cover"></span></a>#}
+                        {#
+                    </li>
+                    #}
                 </ul>
             </div>
             <ul class="pagination">
@@ -161,40 +174,59 @@
     </div>
 </div>
 <div id="footer">
-{#    <ul id="featured" class="wrapper clearfix">#}
-{#        <li>#}
-{#            <img src="images/astronaut.jpg" alt="Img" height="204" width="220">#}
-{#            <h3><a href="blog.html">Category 1</a></h3>#}
-{#            <p>#}
-{#                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec mi tortor. Phasellus commodo semper#}
-{#                vehicula.#}
-{#            </p>#}
-{#        </li>#}
-{#        <li>#}
-{#            <img src="images/earth.jpg" alt="Img" height="204" width="220">#}
-{#            <h3><a href="blog.html">Category 2</a></h3>#}
-{#            <p>#}
-{#                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec mi tortor. Phasellus commodo semper#}
-{#                vehicula.#}
-{#            </p>#}
-{#        </li>#}
-{#        <li>#}
-{#            <img src="images/spacecraft-small.jpg" alt="Img" height="204" width="220">#}
-{#            <h3><a href="blog.html">Category 3</a></h3>#}
-{#            <p>#}
-{#                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec mi tortor. Phasellus commodo semper#}
-{#                vehicula.#}
-{#            </p>#}
-{#        </li>#}
-{#        <li>#}
-{#            <img src="images/space-shuttle.jpg" alt="Img" height="204" width="220">#}
-{#            <h3><a href="blog.html">Category 4</a></h3>#}
-{#            <p>#}
-{#                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec mi tortor. Phasellus commodo semper#}
-{#                vehicula.#}
-{#            </p>#}
-{#        </li>#}
-{#    </ul>#}
+    {#
+    <ul class="wrapper clearfix" id="featured">#}
+        {#
+        <li>#}
+            {# <img alt="Img" height="204" src="images/astronaut.jpg" width="220">#}
+            {# <h3><a href="blog.html">Category 1</a></h3>#}
+            {# <p>#}
+                {# Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec mi tortor. Phasellus commodo
+                semper#}
+                {# vehicula.#}
+                {# </p>#}
+            {#
+        </li>
+        #}
+        {#
+        <li>#}
+            {# <img alt="Img" height="204" src="images/earth.jpg" width="220">#}
+            {# <h3><a href="blog.html">Category 2</a></h3>#}
+            {# <p>#}
+                {# Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec mi tortor. Phasellus commodo
+                semper#}
+                {# vehicula.#}
+                {# </p>#}
+            {#
+        </li>
+        #}
+        {#
+        <li>#}
+            {# <img alt="Img" height="204" src="images/spacecraft-small.jpg" width="220">#}
+            {# <h3><a href="blog.html">Category 3</a></h3>#}
+            {# <p>#}
+                {# Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec mi tortor. Phasellus commodo
+                semper#}
+                {# vehicula.#}
+                {# </p>#}
+            {#
+        </li>
+        #}
+        {#
+        <li>#}
+            {# <img alt="Img" height="204" src="images/space-shuttle.jpg" width="220">#}
+            {# <h3><a href="blog.html">Category 4</a></h3>#}
+            {# <p>#}
+                {# Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec mi tortor. Phasellus commodo
+                semper#}
+                {# vehicula.#}
+                {# </p>#}
+            {#
+        </li>
+        #}
+        {#
+    </ul>
+    #}
     <div class="body">
         <div class="wrapper clearfix">
             <div id="links">

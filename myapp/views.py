@@ -41,3 +41,8 @@ class ContactView(View):
         #     'customers': customers,
         # })
         return render(request, 'contact.html')
+
+
+class AdminView(View):
+    def get(self, request):
+        return render(request, 'admin.html')
