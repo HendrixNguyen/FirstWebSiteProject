@@ -19,7 +19,9 @@ from django.contrib import admin
 from django.urls import path
 from django.views.generic import RedirectView
 
-from myapp.views import HomeView, GalleryView, AboutView, ContactView
+
+#Import Third_package
+from myapp.views import HomeView, GalleryView, AboutView, ContactView, AdminView
 
 urlpatterns = [
                   path('admin/', admin.site.urls),
@@ -27,7 +29,8 @@ urlpatterns = [
                   path('home/', HomeView.as_view()),
                   path('gallery/', GalleryView.as_view()),
                   path('about/', AboutView.as_view()),
-                  path('contact/', ContactView.as_view())
+                  path('contact/', ContactView.as_view()),
+                  path('user/', AdminView.as_view()),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 #
 # def home():

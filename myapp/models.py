@@ -9,6 +9,9 @@ class User(models.Model):
     address = models.CharField(max_length=255, unique=True)
     Faculty = models.CharField(max_length=15)
 
+    def __str__(self):
+        self.name
+
 
 class Customer(models.Model):
     name = models.CharField(max_length=255, null=None)
