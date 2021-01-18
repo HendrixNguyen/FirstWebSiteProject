@@ -60,39 +60,42 @@
                         <a href="#">
                             <h1>{{ product.product_name }}</h1>
                             <img src="{{ product.picture.url }}"/>
-                            <p>{{ product.specific }}</p>
+                            {% for detail in details %}
+                            <p>{{ detail.specific }}
+                                {{ detail.color }}</p>
+                            {% endfor %}
                         </a>
                     </li>
                     {% endfor %}
 
-<!--                    {#-->
-<!--                    <li>#}-->
-<!--                        {# <a href="gallery.html"><img #} alt="Img" height="96" src="images/thumbnail-astronaut.jpg"-->
-<!--                                                       width="150" {#><span class="cover"></span></a>#}-->
-<!--                        {#-->
-<!--                    </li>-->
-<!--                    #}-->
-<!--                    {#-->
-<!--                    <li>#}-->
-<!--                        {# <a href="gallery.html"><img #} alt="Img" height="96" src="images/thumbnail-spacecraft.jpg"-->
-<!--                                                       width="150" {#><span class="cover"></span></a>#}-->
-<!--                        {#-->
-<!--                    </li>-->
-<!--                    #}-->
-<!--                    {#-->
-<!--                    <li>#}-->
-<!--                        {# <a href="gallery.html"><img #} alt="Img" height="96" src="images/thumbnail-earth.jpg"-->
-<!--                                                       width="150" {#><span class="cover"></span></a>#}-->
-<!--                        {#-->
-<!--                    </li>-->
-<!--                    #}-->
-<!--                    {#-->
-<!--                    <li>#}-->
-<!--                        {# <a href="gallery.html"><img #} alt="Img" height="96" src="images/thumbnail-craft.jpg"-->
-<!--                                                       width="150" {#><span class="cover"></span></a>#}-->
-<!--                        {#-->
-<!--                    </li>-->
-<!--                    #}-->
+                    <!--                    {#-->
+                    <!--                    <li>#}-->
+                    <!--                        {# <a href="gallery.html"><img #} alt="Img" height="96" src="images/thumbnail-astronaut.jpg"-->
+                    <!--                                                       width="150" {#><span class="cover"></span></a>#}-->
+                    <!--                        {#-->
+                    <!--                    </li>-->
+                    <!--                    #}-->
+                    <!--                    {#-->
+                    <!--                    <li>#}-->
+                    <!--                        {# <a href="gallery.html"><img #} alt="Img" height="96" src="images/thumbnail-spacecraft.jpg"-->
+                    <!--                                                       width="150" {#><span class="cover"></span></a>#}-->
+                    <!--                        {#-->
+                    <!--                    </li>-->
+                    <!--                    #}-->
+                    <!--                    {#-->
+                    <!--                    <li>#}-->
+                    <!--                        {# <a href="gallery.html"><img #} alt="Img" height="96" src="images/thumbnail-earth.jpg"-->
+                    <!--                                                       width="150" {#><span class="cover"></span></a>#}-->
+                    <!--                        {#-->
+                    <!--                    </li>-->
+                    <!--                    #}-->
+                    <!--                    {#-->
+                    <!--                    <li>#}-->
+                    <!--                        {# <a href="gallery.html"><img #} alt="Img" height="96" src="images/thumbnail-craft.jpg"-->
+                    <!--                                                       width="150" {#><span class="cover"></span></a>#}-->
+                    <!--                        {#-->
+                    <!--                    </li>-->
+                    <!--                    #}-->
                 </ul>
             </div>
             <ul class="pagination">

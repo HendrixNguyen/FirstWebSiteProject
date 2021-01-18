@@ -32,7 +32,7 @@ class ProductDetailAdmin(admin.ModelAdmin):
 # class BrandAdmin(admin.ModelAdmin):
 #     pass
 
-admin.site.register(User )
+admin.site.register(User)
 admin.site.register(Customer, CustomerAdmin)
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Brand)
