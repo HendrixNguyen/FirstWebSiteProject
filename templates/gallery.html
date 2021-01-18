@@ -58,9 +58,9 @@
                     {% for product in products %}
                     <li>
                         <a href="#">
-                            {% for _ in loop %}
+                            <h1>{{ product.product_name }}</h1>
                             <img src="{{ product.picture.url }}"/>
-                            {% endfor %}
+                            <p>{{ product.specific }}</p>
                         </a>
                     </li>
                     {% endfor %}
