@@ -1,7 +1,9 @@
+from django.contrib.auth import authenticate
+from django.db.models import Model
 from django.shortcuts import render
 from django.views import View
 
-from myapp.models import Customer, Product
+from myapp.models import Customer, Product, Product_Detail
 
 
 class HomeView(View):
@@ -19,7 +21,6 @@ class GalleryView(View):
         products = Product.objects.all()
         return render(request, 'gallery.html', {
             'products': products,
-            'loop': range(50),
         })
 
 
@@ -44,5 +45,13 @@ class ContactView(View):
 
 
 class AdminView(View):
-    def get(self, request):
-        return render(request, 'admin.html')
+    def login(self, request):
+        usrn = request.POST['fname'],
+        passw = request.POST['fpass']
+        user = authenticate(request, usrn, passw)
+        if user in Model.User.email:
+            self.login(request, user)
+            return render(request, 'home')
+        else:
+            pass
+        # return render(request, 'admin.html')

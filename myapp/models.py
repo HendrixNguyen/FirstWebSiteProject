@@ -5,7 +5,7 @@ from django.db import models
 class User(models.Model):
     JOB_MANAGER = "Quản Lý"
     JOB_STAFF = "Tư Vấn"
-    #Enumrable
+    # Enumrable
     JOBS = [
         ("manager", JOB_MANAGER),
         ("staff", JOB_STAFF),
@@ -16,9 +16,9 @@ class User(models.Model):
     email = models.EmailField(max_length=100, blank=True, null=None)
     address = models.CharField(max_length=255, unique=True, null=None)
     Faculty = models.CharField(max_length=20, choices=JOBS, default=JOB_STAFF, null=None)
-
+    #
     # def __str__(self):
-    #     self.email
+    #     return self.email
 
 
 class Customer(models.Model):
@@ -35,6 +35,9 @@ class Product(models.Model):
     picture = models.FileField(upload_to='uploads')
     video = models.FileField(null=True, blank=True)
     brand = models.ForeignKey('myapp.Brand', on_delete=models.CASCADE)
+    #
+    # def __str__(self):
+    #     return self.product_name
 
 
 class Brand(models.Model):
@@ -45,6 +48,9 @@ class Product_Detail(models.Model):
     specific = models.TextField()
     color = models.CharField(max_length=20, null=True, blank=True)
     product = models.ForeignKey('myapp.Product', on_delete=models.CASCADE)
+    #
+    # def __str__(self):
+    #     return self.product
 
 
 class Product_List(models.Model):
