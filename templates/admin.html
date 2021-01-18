@@ -1,14 +1,14 @@
 {% extends './base.html' %}
 
 {% block content %}
-<div>
-    <div id="usn">
-        <h5> Username </h5>
-        <button id="usname" type="button">Input Username</button>
+<div class="usersite">
+<form action="admin" method="post, get">
+    <label for="fname">username</label><br>
+    <input type="text" id="fname" name="fname" value="username"><br>
+    <label for="fpass">password</label><br>
+    <input type="password" id="fpass" name="fname" value="password"><br>
+    <input type="submit" id="login" value="Đăng nhập" onclick="{{ }}">
+</form>
     </div>
-    <div id="pas">
-        <h5>Password</h5>
-        <button id="pass" type="button">Input password</button>
-    </div>
-</div>
 {% endblock %}
+
