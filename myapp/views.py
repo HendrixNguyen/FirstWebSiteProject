@@ -19,8 +19,10 @@ class HomeView(View):
 class GalleryView(View):
     def get(self, request, *args, **kwargs):
         products = Product.objects.all()
+        details = Product_Detail.objects.all()
         return render(request, 'gallery.html', {
             'products': products,
+            'details': details
         })
 
 
