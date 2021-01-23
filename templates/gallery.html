@@ -59,8 +59,10 @@
                     <li>
                         <a href="#">
                             <h1>{{ product.product_name }}</h1>
-                            <img src="{{ product.picture.url }}"/>
-                            <p>{{ product.specific }}</p>
+                            <img src="{{ product.picture.url }}" width="30%"/>
+                            {% for detail in product.details_data %}
+                                <p>{{ detail.specific }}</p>
+                            {% endfor %}
                         </a>
                     </li>
                     {% endfor %}

@@ -19,14 +19,18 @@ class HomeView(View):
 class GalleryView(View):
     def get(self, request, *args, **kwargs):
         products = Product.objects.all()
+        details = Product_Detail.objects.all()
+        for product in products:
+            setattr(product, 'details_data', product.details.all())
         return render(request, 'gallery.html', {
             'products': products,
+            'details': details
         })
 
 
 class AboutView(View):
     def get(self, request, *args, **kwargs):
-        # customers = Customer.objects.filter(respones__isnull=False).all()
+        customers = Customer.objects.filter(respones__isnull=False).all()
         #
         # return render(request, 'index.html', {
         #     'customers': customers,

@@ -47,7 +47,7 @@ class Brand(models.Model):
 class Product_Detail(models.Model):
     specific = models.TextField()
     color = models.CharField(max_length=20, null=True, blank=True)
-    product = models.ForeignKey('myapp.Product', on_delete=models.CASCADE)
+    product = models.ForeignKey('myapp.Product', related_name='details', on_delete=models.CASCADE)
     #
     # def __str__(self):
     #     return self.product

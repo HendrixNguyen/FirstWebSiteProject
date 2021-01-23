@@ -76,10 +76,10 @@ WSGI_APPLICATION = 'CNPM.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'project_cnpm',
-        'USER': 'admin',
-        'PASSWORD': 'admin',
-        'HOST': '18.222.192.153',
+        'NAME': 'bwuynpzoz1ut7cojpi8a',
+        'USER': 'uoqbxz57pkm2p4f1',
+        'PASSWORD': 'im6aNXyGn78MRKk39cvB',
+        'HOST': 'bwuynpzoz1ut7cojpi8a-mysql.services.clever-cloud.com',
         'PORT': '3306',
     }
 }
